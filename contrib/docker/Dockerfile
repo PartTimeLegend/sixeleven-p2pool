@@ -8,7 +8,7 @@ RUN set -ex \
 
 	# install dependencies
 	&& apt-get install -y --no-install-recommends ca-certificates wget git \
-		python-zope.interface python-twisted python-twisted-web gpg \
+		python-zope.interface python-twisted python-twisted-web gpg dirmngr
 
 	# grab gosu for easy step-down from root
 	&& gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
@@ -22,7 +22,7 @@ RUN set -ex \
 	&& cd /home/p2pool \
 	&& git clone --recursive https://github.com/fflo/sixeleven-p2pool.git p2pool \
 	&& chown p2pool:p2pool -R /home/p2pool/p2pool \
-	&& chmod +x /home/p2pool/p2pool/run_p2pool.py \
+	&& chmod +x /home/p2pool/p2pool/run_p2pool.py
 
 	# cleanup
 	&& apt-get -y purge git \
