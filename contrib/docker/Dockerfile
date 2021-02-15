@@ -8,7 +8,7 @@ RUN set -ex \
 
 	# install dependencies
 	&& apt-get install -y --no-install-recommends ca-certificates wget git \
-		python-zope.interface python-twisted python-twisted-web \
+		python-zope.interface python-twisted python-twisted-web gpg \
 
 	# grab gosu for easy step-down from root
 	&& gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
