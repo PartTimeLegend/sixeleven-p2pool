@@ -1,9 +1,6 @@
 # 611 (SixEleven) sixeleven-p2pool docker iamge (based on jramos/p2pool fork)
 
-FROM debian:jessie
-
-MAINTAINER Florian Fuessl <flo@degnet.de>
-ENV REFRESHED_AT 20161113
+FROM debian
 
 RUN groupadd -r p2pool && useradd -r -m -g p2pool p2pool
 
