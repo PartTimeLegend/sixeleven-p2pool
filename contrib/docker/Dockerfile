@@ -1,5 +1,3 @@
-# 611 (SixEleven) sixeleven-p2pool docker iamge (based on jramos/p2pool fork)
-
 FROM debian
 
 RUN groupadd -r p2pool && useradd -r -m -g p2pool p2pool
@@ -38,7 +36,7 @@ RUN mkdir $P2POOL_DATA \
 	&& ln -s $P2POOL_DATA /home/p2pool/p2pool/data
 VOLUME ["/p2pool"]
 
-COPY docker-entrypoint.sh /entrypoint.sh
+COPY contrib/docker/docker-entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 9332 9332
