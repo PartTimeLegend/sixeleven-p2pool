@@ -1,5 +1,6 @@
 Requirements & Installation
 -------------------------
+![Docker Image CI](https://github.com/PartTimeLegend/sixeleven-p2pool/workflows/Docker%20Image%20CI/badge.svg)
 Generic:
 * Bitcoin >=0.11.1
 * Python >=2.6
