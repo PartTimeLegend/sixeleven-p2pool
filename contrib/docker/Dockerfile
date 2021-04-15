@@ -1,4 +1,4 @@
-FROM debian
+FROM debian:buster-20210329-slim
 
 RUN groupadd -r p2pool && useradd -r -m -g p2pool p2pool
 
